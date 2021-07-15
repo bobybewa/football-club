@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/navbar/navbar'
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+import AreasPage from './views/areas/areas'
+import ChildAreasPage from './views/childAreas/childArea'
+import TeamsPage from './views/teams/teams'
+import TeamPage from './views/team/team'
+import GetPlayerPage from './views/players/players'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-green-400">
+      <Navbar/>
+      <Switch>
+        <Route path="/teams/:id">
+          <TeamPage/>
+        </Route>
+        <Route path="/areas/:id">
+          <ChildAreasPage/>
+        </Route>
+        <Route path="/teams">
+          <TeamsPage/>
+        </Route>
+        <Route path="/players">
+          <GetPlayerPage/>
+        </Route>
+        <Route exact path="/">
+          <AreasPage/>
+        </Route>
+      </Switch>
     </div>
   );
 }

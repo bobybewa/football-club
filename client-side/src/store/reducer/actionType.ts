@@ -1,0 +1,7 @@
+export const SETAREAS:string = 'SETAREAS'
+export const SETAREABYID:string = 'SET_AREA_BY_ID'
+export const SETLOADING:string = 'SET_LOADING'
+export const SETTEAMS :string = 'SET_TEAMS'
+export const SETTEAM:string = 'SET_TEAM'
+export const SETNUMBERPLAYER:string = 'SET_NUMBER_OF_PLAYER'
+export const SETPLAYER:string = 'SET_PLAYER'
